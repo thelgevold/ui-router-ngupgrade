@@ -32181,7 +32181,7 @@ var Ng1Ng2UrlHandlingStrategy = (function () {
     function Ng1Ng2UrlHandlingStrategy() {
     }
     Ng1Ng2UrlHandlingStrategy.prototype.shouldProcessUrl = function (url) {
-        return url.toString().indexOf("/cars") >= 0;
+        return url.toString().startsWith("/cars");
     };
     Ng1Ng2UrlHandlingStrategy.prototype.extract = function (url) { return url; };
     Ng1Ng2UrlHandlingStrategy.prototype.merge = function (url, whole) { return url; };

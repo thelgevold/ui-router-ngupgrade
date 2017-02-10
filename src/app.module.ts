@@ -6,7 +6,7 @@ import {RouterModule, UrlHandlingStrategy} from '@angular/router';
 
 export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) { 
-    return url.toString().indexOf("/cars") >= 0; 
+    return url.toString().startsWith("/cars"); 
   }
   extract(url) { return url; }
   merge(url, whole) { return url; }
