@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "lib": ["es2015", "dom"],
+    "moduleResolution": "node",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": false
+  },
+  "files": [
+    "./src/app.module.ts",
+    "./src/bootstrap.ts"
+  ],
+   "angularCompilerOptions": {
+    "genDir": "./src/upgrade-aot"
+  }
+}

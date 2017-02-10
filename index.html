@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <base href="/">
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/friends/friends.component.js"></script>
+  </head>
+
+  <body>
+    <a ui-sref="home">Home</a>
+    <a ui-sref="friends({name:'Joe'})">Friends of Joe</a>
+    <a ui-sref="friends({name:'Jane'})">Friends of Jane</a>
+    <a href="/cars">Cars</a>
+    
+    <outlet></outlet>
+
+    <script src="dist/build.js"></script>
+  </body>
+</html>
