@@ -3,8 +3,6 @@ angular.module('awesome', ['ui.router']);
 angular.module('awesome').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
-  $urlRouterProvider
-  
   $stateProvider
     .state('home', {
       url: '/',
