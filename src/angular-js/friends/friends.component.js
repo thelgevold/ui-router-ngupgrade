@@ -1,5 +1,5 @@
 angular.module('awesome').component('friendsComponent', {
-  templateUrl:'src/friends/friends.component.html',
+  templateUrl:'src/angular-js/friends/friends.component.html',
   controller: function ($stateParams) {
     this.message = $stateParams.name;
 

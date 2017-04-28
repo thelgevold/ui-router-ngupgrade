@@ -6,7 +6,7 @@ angular.module('awesome').config(function($stateProvider, $urlRouterProvider, $l
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/src/home/home.html'
+      templateUrl: '/src/angular-js/home/home.html'
     })
     .state('cars', {
       url:'/cars',
@@ -15,7 +15,7 @@ angular.module('awesome').config(function($stateProvider, $urlRouterProvider, $l
     })
     .state('friends', {
       url: '/friends/:name',
-      templateUrl: '/src/friends/friends.html'
+      templateUrl: '/src/angular-js/friends/friends.html'
     });
 });
 

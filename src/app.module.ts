@@ -1,4 +1,4 @@
-import {NgModule, Component} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {UpgradeModule} from '@angular/upgrade/static';
 import {platformBrowser, BrowserModule} from '@angular/platform-browser';
 import {RouterUpgradeInitializer} from '@angular/router/upgrade';
@@ -12,23 +12,18 @@ export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
   merge(url, whole) { return url; }
 }
 
-import {CarsModule} from './cars/cars.module';
+import {AppComponent} from './app.component';
 
-@Component({
-  selector: 'outlet',
-  template: `<router-outlet></router-outlet>
-             <div ui-view></div>`
-})
-export class OutletComponent {}
+import {CarsModule} from './angular/cars/cars.module';
 
 @NgModule({
-  declarations: [OutletComponent],
+  declarations: [AppComponent],
   entryComponents: [],  
   imports: [BrowserModule, 
             UpgradeModule,
             CarsModule,
             RouterModule.forRoot([])],
-  bootstrap: [OutletComponent],
+  bootstrap: [AppComponent],
   providers: [
     { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy }
   ],
