@@ -4,7 +4,7 @@ import commonjs    from 'rollup-plugin-commonjs';
 import uglify      from 'rollup-plugin-uglify';
 
 export default {
-  entry: 'src/bootstrap.js',
+  entry: 'built/bootstrap.js',
   dest: './dist/build.js',
   sourceMap: true,
   sourceMapFile: './dist/build.js.map',
