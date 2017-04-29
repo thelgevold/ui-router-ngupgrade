@@ -2,16 +2,20 @@ angular.module('awesome', ['ui.router']);
 
 angular.module('awesome').config(['$stateProvider', '$locationProvider',
   function($stateProvider, $locationProvider) {
+
   $locationProvider.html5Mode(true);
 
     $stateProvider
       .state('home', {
-        url: '/home',
+        url: '/',
         templateUrl: '/src/angular-js/home/home.html'
       })
-      .state('cars', {
-        url:'/cars',
-        //Used to clear out ui-view when the angular router is activated
+      .state('spreadsheet', {
+        url:'/spreadsheet',
+        template: ''
+      })
+      .state('treeview', {
+        url:'/treeview',
         template: ''
       })
       .state('friends', {

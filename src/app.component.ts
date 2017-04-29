@@ -5,4 +5,8 @@ import {NgModule, Component} from '@angular/core';
   template: `<router-outlet></router-outlet>
              <div ui-view></div>`
 })
-export class AppComponent {}
+export class AppComponent {
+  ngOnInit() {
+    
+  }
+}

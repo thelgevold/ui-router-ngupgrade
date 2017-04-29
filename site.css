@@ -1,0 +1,212 @@
+ul{
+    list-style-type: none;
+}
+
+.addContactControls{
+    margin-top: 20px;
+}
+
+.iconButton{
+    font-size: 20px;
+    margin-right: 5px;
+    cursor:pointer;
+}
+
+#spreadsheet td.active-cell input {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+.row-number-column{
+    width: 40px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+#spreadsheet td{
+    border: 1px solid gray;
+}
+
+#spreadsheet input{
+    border:0;
+}
+
+#spreadsheet .columnHeader{
+    background-color: #eeeeee;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.current-item{
+    background-color: lightgray;
+}
+
+.sort td{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#react-tree-view{
+    font-size: 20px;
+}
+
+.moving-box{
+    padding-top: 10px;
+    border: 1px solid black;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    cursor: move;
+}
+
+.input-controls{
+    margin-bottom: 30px;
+}
+
+.errorMessage{
+    color:red;
+    font-weight: bold;
+}
+
+.formHeading{
+    font-weight: bold;
+}
+
+div.edge{
+    transform-origin: 0 100%;
+    height: 1px;
+    background: #337ab7;
+}
+
+.vertex {
+    /*border-radius: 50%;*/
+    width: 40px;
+    height: 40px;
+    background-color: #337ab7;
+    position:relative;
+    display:block;
+}
+
+.graph-table{
+    border-spacing: 70px;
+    border-collapse: separate;
+}
+
+.vertex-text{
+    position:absolute;
+    top:50%;
+    height:50%;
+    width:40px;
+    margin-top:-25%;
+    text-align:center;
+    color:white;
+}
+
+.form-row{
+    margin-top: 10px;
+}
+
+.editor{
+    border: 1px #ddd solid;
+    width: 400px;
+    height: 200px;
+    overflow: scroll;
+}
+
+.page span{
+    cursor:text;
+}
+
+.page{
+    margin: 10px;
+    white-space: pre;
+    cursor:text;
+}
+
+.currentChar{
+    border-right: 1px black solid;
+}
+
+.selectedChar{
+    background-color: lightgreen;
+}
+
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.tree-node-no-children{
+    margin-right: 22px;
+}
+
+.addNewNode{
+    margin-left: 22px;
+}
+
+.addNewNode input{
+    width: 100px;
+
+}
+
+.addNewNode button{
+    width: 40px;
+
+    margin-left: 2px;
+}
+
+.stream1{
+    background-color: lightgreen;
+    width:70px;
+    text-align: center;
+    margin-right: 2px;
+    margin-top: 5px;
+}
+
+.stream2{
+    background-color: lightskyblue;
+    width:70px;
+    text-align: center;
+    margin-right: 2px;
+    margin-top: 5px;
+}
+
+.stream-section{
+    clear: both;
+    margin-top: 50px;
+}
+
+.floatLeft{
+    float:left;
+}
+
+.box{
+    background-color: #003eff;
+    width:50px;
+    height: 50px;
+    margin-bottom: 10px;
+    color:white;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.sum{
+    font-size: 20px;
+    font-weight: bold;
+}
