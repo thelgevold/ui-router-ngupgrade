@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
 import {platformBrowser, BrowserModule} from '@angular/platform-browser';
 import {RouterUpgradeInitializer} from '@angular/router/upgrade';
 import {RouterModule, UrlHandlingStrategy} from '@angular/router';
@@ -12,23 +11,24 @@ export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
   merge(url, whole) { return url; }
 }
 
+import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {CarsModule} from './angular/cars/cars.module';
+import {NgUpgradeModule} from './angular/ng-upgrade/ng-upgrade.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],  
   imports: [BrowserModule, 
-            UpgradeModule,
             CarsModule,
-            RouterModule.forRoot([])],
+            NgUpgradeModule,
+            AppRoutingModule],
+            
   bootstrap: [AppComponent],
   providers: [
     { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy }
   ],
 })
-export class AppModule {
-  constructor(public upgrade: UpgradeModule){}
-}
+export class AppModule {}
 
