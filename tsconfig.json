@@ -5,17 +5,13 @@
     "lib": ["es2015", "dom"],
     "moduleResolution": "node",
     "removeComments": true,
-    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowUnreachableCode": false,
     "noImplicitAny": false,
     "outDir": "built"
   },
-  "files": [
-    "./src/app.module.ts",
-    "./src/bootstrap.ts"
-  ],
+ 
    "angularCompilerOptions": {
     "genDir": "./src/upgrade-aot",
     "entryModule": "src/app.module#AppModule"
