@@ -8,7 +8,7 @@ import {CarsComponent} from './cars.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: 'cars', component: CarsComponent}
+      { path: '', component: CarsComponent}
     ])
   ],
   declarations: [CarsComponent]

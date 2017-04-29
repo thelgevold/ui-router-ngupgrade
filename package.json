@@ -25,7 +25,8 @@
     "raw-loader": "^0.5.1",
     "source-map-explorer": "^1.3.2",
     "typescript": "^2.0.10",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "compression": "^1.6.2"
   },
   "scripts": {
     "start": "webpack && lite-server"

@@ -1,5 +1,7 @@
 node_modules
 built
 dist
+0.dist
+1.dist
 src/upgrade-aot
 src/*.js

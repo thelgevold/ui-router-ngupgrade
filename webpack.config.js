@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'dist/build.js'
   },
+  devtool: 'source-map',
   plugins: [
     new ngToolsWebpack.AotPlugin({
       tsConfigPath: './tsconfig.json'
@@ -17,25 +18,35 @@ module.exports = {
 			minimize: true,
 			debug: false
 		}),
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: {
-		// 		warnings: false
-		// 	},
-		// 	output: {
-		// 		comments: false
-		// 	},
-		// 	sourceMap: true
-		// })
+		new webpack.optimize.UglifyJsPlugin({
+			beautify: false, 
+      output: {
+        comments: false
+      }, 
+      mangle: {
+        screw_ie8: true
+      }, 
+      compress: {
+        screw_ie8: true,
+        warnings: false,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        negate_iife: false
+      },
+      sourceMap: true
+		})
   ],
   module: {
     loaders: [
-      { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
       { test: /\.css$/, loader: 'raw-loader' },
       { test: /\.html$/, loader: 'raw-loader' },
       { test: /\.ts$/, loader: '@ngtools/webpack' }
     ]
-  },
-  devServer: {
-    historyApiFallback: true
   }
 };
