@@ -2,6 +2,10 @@ import {Routes, RouterModule}   from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'survey',
+    loadChildren: './angular/survey/survey.module#SurveyModule'
+  },
+  {
     path: 'treeview',
     loadChildren: './angular/lazy-loaded-tree-view/tree-view.module#TreeviewModule'
   },
