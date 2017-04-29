@@ -3,13 +3,15 @@ import {platformBrowser, BrowserModule} from '@angular/platform-browser';
 import {RouterUpgradeInitializer} from '@angular/router/upgrade';
 import {RouterModule, UrlHandlingStrategy} from '@angular/router';
 
-export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
-  shouldProcessUrl(url) { 
-    return url.toString().startsWith("/cars"); 
-  }
-  extract(url) { return url; }
-  merge(url, whole) { return url; }
-}
+import {NgUpgradeService} from './angular/ng-upgrade/ng-upgrade.service';
+
+// export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
+//   shouldProcessUrl(url) { 
+//     return url.toString().startsWith("/cars"); 
+//   }
+//   extract(url) { return url; }
+//   merge(url, whole) { return url; }
+// }
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -24,10 +26,11 @@ import {NgUpgradeModule} from './angular/ng-upgrade/ng-upgrade.module';
             CarsModule,
             NgUpgradeModule,
             AppRoutingModule],
-            
+
   bootstrap: [AppComponent],
   providers: [
-    { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy }
+    NgUpgradeService
+  //  { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy }
   ],
 })
 export class AppModule {}

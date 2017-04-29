@@ -16,6 +16,7 @@
     "./src/bootstrap.ts"
   ],
    "angularCompilerOptions": {
-    "genDir": "./src/upgrade-aot"
+    "genDir": "./src/upgrade-aot",
+    "entryModule": "src/app.module#AppModule"
   }
 }
