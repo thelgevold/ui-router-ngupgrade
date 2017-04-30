@@ -19,6 +19,4 @@ import 'src/angular-js/friends/friends.component.js';
   declarations: [NgUpgradeComponent],
   entryComponents: [SurveyDemo]
 })
-export class NgUpgradeModule {
-  
-}
+export class NgUpgradeModule {}
