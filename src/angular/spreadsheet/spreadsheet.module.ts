@@ -6,7 +6,7 @@ import {Spreadsheet} from './spreadsheet';
 
 @NgModule({
   imports: [RouterModule.forChild([
-    {path: '**', component: Spreadsheet}
+    {path: '', component: Spreadsheet}
   ]),
   CommonModule
   ],

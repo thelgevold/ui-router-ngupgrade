@@ -2,8 +2,10 @@ angular.module('awesome').component('friendsComponent', {
   templateUrl:'src/angular-js/friends/friends.component.html',
   controller: function () {
    
-    var friends = ['Tim', 'Jack', 'Lisa'];
+    this.friends = ['Tim', 'Jack', 'Lisa'];
 
-    this.friends = friends;
+    this.hello = function() {
+      console.log('Hello World');
+    }
   }
 });

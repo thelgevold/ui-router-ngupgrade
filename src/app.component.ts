@@ -8,10 +8,6 @@ import {NgModule, Component} from '@angular/core';
             <a [routerLink]="['/spreadsheet']">Spreadsheet</a>
             <a [routerLink]="['/treeview']">Treeview</a>
             <router-outlet></router-outlet>
-            <div ui-view></div>`
+            <div id='awesome' ui-view></div>`
 })
-export class AppComponent {
-  ngOnInit() {
-
-  }
-}
+export class AppComponent {}

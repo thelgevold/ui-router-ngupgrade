@@ -8,7 +8,7 @@ import {SurveyDemo} from './survey-demo';
 
 @NgModule({
   imports: [RouterModule.forChild([
-    {path: '**', component: SurveyDemo}
+    {path: '', component: SurveyDemo}
   ]),
   CommonModule,
   ReactiveFormsModule

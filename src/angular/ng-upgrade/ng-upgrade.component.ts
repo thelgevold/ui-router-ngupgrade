@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {UpgradeModule, downgradeComponent, downgradeInjectable} from '@angular/upgrade/static';
+import {UpgradeModule, downgradeComponent} from '@angular/upgrade/static';
 import {setUpLocationSync} from '@angular/router/upgrade';
 
 import {NgUpgradeService} from './ng-upgrade.service';
@@ -14,13 +14,10 @@ declare var angular: any;
 export class NgUpgradeComponent {
   
   constructor(upgrade: UpgradeModule, upgradeService: NgUpgradeService) {
-    
     if(upgradeService.bootstrapped === false) {
       angular.module('awesome').directive('survey', downgradeComponent({component: SurveyDemo}));
       
-      console.log('Bootstrapping');
-      upgrade.bootstrap(document.body, ['awesome']);
-      setUpLocationSync(upgrade);
+      upgrade.bootstrap(document.querySelector('#awesome'), ['awesome']);
       upgradeService.bootstrapped = true;
     }
   }  
